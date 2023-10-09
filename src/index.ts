@@ -6,11 +6,11 @@ import roomHandler from './room';
 
 const port = 8080;
 const app = express();
-app.use(cors)
+app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
     cors:{
-        origin: true,
+        origin: "*",
         methods: ["GET", "POST"]
     }
 });
